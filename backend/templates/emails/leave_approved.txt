@@ -1,0 +1,17 @@
+Leave Request Approved
+
+Dear {{ leave_request.employee.get_full_name }},
+
+Your leave request has been approved. Here are the details:
+
+Type: {{ leave_request.get_leave_type_display }}
+Start Date: {{ leave_request.start_date }}
+End Date: {{ leave_request.end_date }}
+Duration: {{ leave_request.duration }} days
+Reason: {{ leave_request.reason }}
+
+You can download the approved leave document at: {{ pdf_url }}
+
+If you have any questions, please contact your department administrator.
+
+This is an automated message. Please do not reply to this email. 

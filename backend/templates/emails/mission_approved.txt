@@ -1,0 +1,18 @@
+Mission Request Approved
+
+Dear {{ mission_request.employee.get_full_name }},
+
+Your mission request has been approved. Here are the details:
+
+Title: {{ mission_request.title }}
+Type: {{ mission_request.get_mission_type_display }}
+Destination: {{ mission_request.destination }}
+Start Date: {{ mission_request.start_date }}
+End Date: {{ mission_request.end_date }}
+Purpose: {{ mission_request.purpose }}
+
+You can download the approved mission document at: {{ pdf_url }}
+
+If you have any questions, please contact your department administrator.
+
+This is an automated message. Please do not reply to this email. 

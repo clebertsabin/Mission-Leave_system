@@ -1,0 +1,31 @@
+Approval Required
+
+Dear Approver,
+
+A new {{ request_type }} request requires your approval. Here are the details:
+
+{% if request_type == 'mission' %}
+Employee: {{ request.employee.get_full_name }}
+Department: {{ request.employee.department }}
+Title: {{ request.title }}
+Type: {{ request.get_mission_type_display }}
+Destination: {{ request.destination }}
+Start Date: {{ request.start_date }}
+End Date: {{ request.end_date }}
+Purpose: {{ request.purpose }}
+{% else %}
+Employee: {{ request.employee.get_full_name }}
+Department: {{ request.employee.department }}
+Type: {{ request.get_leave_type_display }}
+Start Date: {{ request.start_date }}
+End Date: {{ request.end_date }}
+Duration: {{ request.duration }} days
+Reason: {{ request.reason }}
+{% endif %}
+
+Please log in to the system to review and take action on this request:
+{{ request_url }}
+
+Thank you for your attention to this matter.
+
+This is an automated message. Please do not reply to this email. 
